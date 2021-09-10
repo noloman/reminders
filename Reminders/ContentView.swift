@@ -11,8 +11,8 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var newReminderSheetShown: Bool = false
-    @FetchRequest(entity: Reminder.entity(), sortDescriptors: [])
-    private var reminders: FetchedResults<Reminder>
+    let fetchRequest = Reminder.completedRemindersFetchRequest()
+    var reminders: FetchedResults<Reminder> { return fetchRequest.wrappedValue }
     
     var body: some View {
         NavigationView {
@@ -32,7 +32,7 @@ struct ContentView: View {
                 }) {
                     Label("Add Item", systemImage: "plus")
                 }.sheet(isPresented: $newReminderSheetShown) {
-                    CreateReminderView(isSheetShown: $newReminderSheetShown)
+                    CreateReminderView()
                 }
             }
             .navigationTitle("Reminders")
@@ -42,7 +42,6 @@ struct ContentView: View {
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { self.reminders[$0] }.forEach(viewContext.delete)
-            
             do {
                 try viewContext.save()
             } catch {

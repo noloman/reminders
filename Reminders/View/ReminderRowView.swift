@@ -10,6 +10,7 @@ import SwiftUI
 struct ReminderRowView: View {
     let reminder: Reminder
     @State var isCompleted = false
+    
     var priority: String {
         ReminderPriority(rawValue: reminder.priority)?.fullDisplay ?? "Unknown"
     }
@@ -18,6 +19,7 @@ struct ReminderRowView: View {
         HStack {
             Button(action: {
                 self.isCompleted.toggle()
+                self.reminder.isCompleted = self.isCompleted
             }, label: {
                 Circle()
                     .padding(4)

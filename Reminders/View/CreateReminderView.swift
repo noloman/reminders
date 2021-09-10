@@ -10,7 +10,8 @@ import CoreData
 
 struct CreateReminderView: View {
     @Environment(\.managedObjectContext) var context: NSManagedObjectContext
-    @Binding var isSheetShown: Bool
+    @Environment(\.presentationMode) var presentationMode
+    
     @State var title: String = ""
     @State var notes: String = ""
     @State var dueDate: Date = Date()
@@ -29,8 +30,9 @@ struct CreateReminderView: View {
             }
             .toolbar {
                 Button(action: {
-                    Reminder.createWith(in: context, title: title, priority: priority, notes: notes, dueDate: dueDate, isCompleted: false)
-                    self.isSheetShown = false
+                    Reminder.createWith(in: context, title, priority, notes, dueDate, isCompleted: false) {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
                 }) {
                     Text("Save")
                 }
@@ -41,6 +43,6 @@ struct CreateReminderView: View {
 
 struct CreateReminderView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateReminderView(isSheetShown: .constant(true))
+        CreateReminderView()
     }
 }
