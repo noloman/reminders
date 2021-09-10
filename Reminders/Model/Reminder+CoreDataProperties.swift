@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import SwiftUI
 
 extension Reminder {
     @NSManaged var title: String
@@ -13,9 +14,7 @@ extension Reminder {
     @NSManaged var notes: String?
     @NSManaged var dueDate: Date?
     @NSManaged var isCompleted: Bool
-}
 
-extension Reminder {
     static func createWith(in context: NSManagedObjectContext, title: String, priority: ReminderPriority, notes: String, dueDate: Date, isCompleted: Bool) {
         let reminder = Reminder(context: context)
         reminder.dueDate = dueDate
@@ -29,5 +28,9 @@ extension Reminder {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
+    }
+    
+    static func basicFetchRequest() -> FetchRequest<Reminder> {
+        FetchRequest(entity: Reminder.entity(), sortDescriptors: [])
     }
 }

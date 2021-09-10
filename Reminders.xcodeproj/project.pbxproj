@@ -23,6 +23,9 @@
 		32B7CE7526EB73DF00CC977D /* ReminderPriority+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7CE7426EB73DF00CC977D /* ReminderPriority+Display.swift */; };
 		32B7CE7626EB73DF00CC977D /* ReminderPriority+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7CE7426EB73DF00CC977D /* ReminderPriority+Display.swift */; };
 		32B7CE7726EB73DF00CC977D /* ReminderPriority+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7CE7426EB73DF00CC977D /* ReminderPriority+Display.swift */; };
+		32B7CE7926EB99C300CC977D /* ReminderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7CE7826EB99C300CC977D /* ReminderRowView.swift */; };
+		32B7CE7A26EB99C300CC977D /* ReminderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7CE7826EB99C300CC977D /* ReminderRowView.swift */; };
+		32B7CE7B26EB99C300CC977D /* ReminderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7CE7826EB99C300CC977D /* ReminderRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,7 @@
 		32B7CE6926EB5F5700CC977D /* Reminder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		32B7CE6C26EB627F00CC977D /* CreateReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReminderView.swift; sourceTree = "<group>"; };
 		32B7CE7426EB73DF00CC977D /* ReminderPriority+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderPriority+Display.swift"; sourceTree = "<group>"; };
+		32B7CE7826EB99C300CC977D /* ReminderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				32B7CE6C26EB627F00CC977D /* CreateReminderView.swift */,
+				32B7CE7826EB99C300CC977D /* ReminderRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 				32B7CE3926EB5D7900CC977D /* ContentView.swift in Sources */,
 				32B7CE3726EB5D7900CC977D /* RemindersApp.swift in Sources */,
 				32B7CE4326EB5D7A00CC977D /* Reminders.xcdatamodeld in Sources */,
+				32B7CE7926EB99C300CC977D /* ReminderRowView.swift in Sources */,
 				32B7CE6A26EB5F5700CC977D /* Reminder+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32B7CE6E26EB627F00CC977D /* CreateReminderView.swift in Sources */,
+				32B7CE7A26EB99C300CC977D /* ReminderRowView.swift in Sources */,
 				32B7CE7626EB73DF00CC977D /* ReminderPriority+Display.swift in Sources */,
 				32B7CE4E26EB5D7A00CC977D /* RemindersTests.swift in Sources */,
 			);
@@ -323,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32B7CE6F26EB627F00CC977D /* CreateReminderView.swift in Sources */,
+				32B7CE7B26EB99C300CC977D /* ReminderRowView.swift in Sources */,
 				32B7CE7726EB73DF00CC977D /* ReminderPriority+Display.swift in Sources */,
 				32B7CE5926EB5D7A00CC977D /* RemindersUITests.swift in Sources */,
 			);

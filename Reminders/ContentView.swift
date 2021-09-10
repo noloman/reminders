@@ -10,20 +10,18 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @State var newReminderSheetShown: Bool = false
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Reminder.dueDate, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Reminder>
+    @State private var newReminderSheetShown: Bool = false
+    @FetchRequest(entity: Reminder.entity(), sortDescriptors: [])
+    private var reminders: FetchedResults<Reminder>
     
     var body: some View {
         NavigationView {
             List {
-                if (items.isEmpty) {
+                if (reminders.isEmpty) {
                     Text("There are no reminders")
                 } else {
-                    ForEach(items, id: \.self) { reminder in
-                        Text(reminder.title)
+                    ForEach(reminders, id: \.self) { reminder in
+                        ReminderRowView(reminder: reminder)
                     }
                     .onDelete(perform: deleteItems)
                 }
@@ -43,7 +41,7 @@ struct ContentView: View {
     
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
+            offsets.map { self.reminders[$0] }.forEach(viewContext.delete)
             
             do {
                 try viewContext.save()
