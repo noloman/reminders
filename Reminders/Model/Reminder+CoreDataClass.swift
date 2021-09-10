@@ -8,4 +8,4 @@
 import CoreData
 
 @objc(Reminder)
-class Reminder: NSManagedObject {}
+public class Reminder: NSManagedObject {}
