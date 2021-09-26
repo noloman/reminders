@@ -11,6 +11,7 @@ import CoreData
 struct CreateReminderView: View {
     @Environment(\.managedObjectContext) var context: NSManagedObjectContext
     @Environment(\.presentationMode) var presentationMode
+    let reminderList: ReminderList
     
     @State var title: String = ""
     @State var notes: String = ""
@@ -30,7 +31,7 @@ struct CreateReminderView: View {
             }
             .toolbar {
                 Button(action: {
-                    Reminder.createWith(in: context, title, priority, notes, dueDate, isCompleted: false) {
+                    Reminder.createWith(in: context, title, priority, notes, dueDate, isCompleted: false, in: reminderList) {
                         self.presentationMode.wrappedValue.dismiss()
                     }
                 }) {
@@ -43,6 +44,10 @@ struct CreateReminderView: View {
 
 struct CreateReminderView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateReminderView()
+        let context = PersistenceController.shared.container.viewContext
+        
+        let reminderList = ReminderList(context: context)
+        reminderList.title = "List title"
+        return CreateReminderView(reminderList: reminderList)
     }
 }

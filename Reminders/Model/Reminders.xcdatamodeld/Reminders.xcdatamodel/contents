@@ -9,11 +9,11 @@
         <relationship name="list" maxCount="1" deletionRule="Nullify" destinationEntity="ReminderList" inverseName="reminders" inverseEntity="ReminderList"/>
     </entity>
     <entity name="ReminderList" representedClassName="ReminderList" syncable="YES">
-        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
         <relationship name="reminders" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Reminder" inverseName="list" inverseEntity="Reminder"/>
     </entity>
     <elements>
         <element name="Reminder" positionX="-63" positionY="-18" width="128" height="133"/>
-        <element name="ReminderList" positionX="-63.89306640625" positionY="-119.9546813964844" width="128" height="73"/>
+        <element name="ReminderList" positionX="-63.89306640625" positionY="-119.9546813964844" width="128" height="59"/>
     </elements>
 </model>

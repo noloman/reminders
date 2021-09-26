@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3267762026EE70B1005ABB67 /* ReminderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267761F26EE70B1005ABB67 /* ReminderListView.swift */; };
+		3267762126EE70B1005ABB67 /* ReminderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267761F26EE70B1005ABB67 /* ReminderListView.swift */; };
+		3267762226EE70B1005ABB67 /* ReminderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267761F26EE70B1005ABB67 /* ReminderListView.swift */; };
+		3267762426EE7105005ABB67 /* CreateReminderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267762326EE7105005ABB67 /* CreateReminderListView.swift */; };
+		3267762526EE7105005ABB67 /* CreateReminderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267762326EE7105005ABB67 /* CreateReminderListView.swift */; };
+		3267762626EE7105005ABB67 /* CreateReminderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267762326EE7105005ABB67 /* CreateReminderListView.swift */; };
+		3267762826EE7125005ABB67 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267762726EE7125005ABB67 /* CircularImageView.swift */; };
+		3267762926EE7125005ABB67 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267762726EE7125005ABB67 /* CircularImageView.swift */; };
+		3267762A26EE7125005ABB67 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267762726EE7125005ABB67 /* CircularImageView.swift */; };
+		3267762C26EE76BA005ABB67 /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267762B26EE76BA005ABB67 /* RemindersView.swift */; };
+		3267762D26EE76BA005ABB67 /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267762B26EE76BA005ABB67 /* RemindersView.swift */; };
+		3267762E26EE76BA005ABB67 /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267762B26EE76BA005ABB67 /* RemindersView.swift */; };
 		32B7CE3726EB5D7900CC977D /* RemindersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7CE3626EB5D7900CC977D /* RemindersApp.swift */; };
 		32B7CE3926EB5D7900CC977D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7CE3826EB5D7900CC977D /* ContentView.swift */; };
 		32B7CE3B26EB5D7A00CC977D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32B7CE3A26EB5D7A00CC977D /* Assets.xcassets */; };
@@ -52,6 +64,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3267761F26EE70B1005ABB67 /* ReminderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListView.swift; sourceTree = "<group>"; };
+		3267762326EE7105005ABB67 /* CreateReminderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReminderListView.swift; sourceTree = "<group>"; };
+		3267762726EE7125005ABB67 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
+		3267762B26EE76BA005ABB67 /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
 		32B7CE3326EB5D7800CC977D /* Reminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B7CE3626EB5D7900CC977D /* RemindersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersApp.swift; sourceTree = "<group>"; };
 		32B7CE3826EB5D7900CC977D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -164,9 +180,9 @@
 		32B7CE6626EB5EE300CC977D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				32B7CE4126EB5D7A00CC977D /* Reminders.xcdatamodeld */,
 				32B7CE7C26EBAA0000CC977D /* ReminderList+CoreDataClass.swift */,
 				32B7CE7D26EBAA0000CC977D /* ReminderList+CoreDataProperties.swift */,
-				32B7CE4126EB5D7A00CC977D /* Reminders.xcdatamodeld */,
 				32B7CE6726EB5EFA00CC977D /* Reminder+CoreDataClass.swift */,
 				32B7CE6926EB5F5700CC977D /* Reminder+CoreDataProperties.swift */,
 				32B7CE7426EB73DF00CC977D /* ReminderPriority+Display.swift */,
@@ -179,6 +195,10 @@
 			children = (
 				32B7CE6C26EB627F00CC977D /* CreateReminderView.swift */,
 				32B7CE7826EB99C300CC977D /* ReminderRowView.swift */,
+				3267761F26EE70B1005ABB67 /* ReminderListView.swift */,
+				3267762326EE7105005ABB67 /* CreateReminderListView.swift */,
+				3267762726EE7125005ABB67 /* CircularImageView.swift */,
+				3267762B26EE76BA005ABB67 /* RemindersView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,11 +334,15 @@
 			files = (
 				32B7CE7E26EBAA0000CC977D /* ReminderList+CoreDataClass.swift in Sources */,
 				32B7CE7526EB73DF00CC977D /* ReminderPriority+Display.swift in Sources */,
+				3267762C26EE76BA005ABB67 /* RemindersView.swift in Sources */,
 				32B7CE4026EB5D7A00CC977D /* Persistence.swift in Sources */,
 				32B7CE6826EB5EFA00CC977D /* Reminder+CoreDataClass.swift in Sources */,
 				32B7CE6D26EB627F00CC977D /* CreateReminderView.swift in Sources */,
 				32B7CE3926EB5D7900CC977D /* ContentView.swift in Sources */,
+				3267762026EE70B1005ABB67 /* ReminderListView.swift in Sources */,
 				32B7CE3726EB5D7900CC977D /* RemindersApp.swift in Sources */,
+				3267762426EE7105005ABB67 /* CreateReminderListView.swift in Sources */,
+				3267762826EE7125005ABB67 /* CircularImageView.swift in Sources */,
 				32B7CE4326EB5D7A00CC977D /* Reminders.xcdatamodeld in Sources */,
 				32B7CE7926EB99C300CC977D /* ReminderRowView.swift in Sources */,
 				32B7CE8126EBAA0000CC977D /* ReminderList+CoreDataProperties.swift in Sources */,
@@ -330,8 +354,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3267762526EE7105005ABB67 /* CreateReminderListView.swift in Sources */,
+				3267762926EE7125005ABB67 /* CircularImageView.swift in Sources */,
+				3267762D26EE76BA005ABB67 /* RemindersView.swift in Sources */,
 				32B7CE7F26EBAA0000CC977D /* ReminderList+CoreDataClass.swift in Sources */,
 				32B7CE6E26EB627F00CC977D /* CreateReminderView.swift in Sources */,
+				3267762126EE70B1005ABB67 /* ReminderListView.swift in Sources */,
 				32B7CE7A26EB99C300CC977D /* ReminderRowView.swift in Sources */,
 				32B7CE7626EB73DF00CC977D /* ReminderPriority+Display.swift in Sources */,
 				32B7CE4E26EB5D7A00CC977D /* RemindersTests.swift in Sources */,
@@ -343,8 +371,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3267762626EE7105005ABB67 /* CreateReminderListView.swift in Sources */,
+				3267762A26EE7125005ABB67 /* CircularImageView.swift in Sources */,
+				3267762E26EE76BA005ABB67 /* RemindersView.swift in Sources */,
 				32B7CE8026EBAA0000CC977D /* ReminderList+CoreDataClass.swift in Sources */,
 				32B7CE6F26EB627F00CC977D /* CreateReminderView.swift in Sources */,
+				3267762226EE70B1005ABB67 /* ReminderListView.swift in Sources */,
 				32B7CE7B26EB99C300CC977D /* ReminderRowView.swift in Sources */,
 				32B7CE7726EB73DF00CC977D /* ReminderPriority+Display.swift in Sources */,
 				32B7CE5926EB5D7A00CC977D /* RemindersUITests.swift in Sources */,

@@ -14,7 +14,7 @@ extension ReminderList {
         return NSFetchRequest<ReminderList>(entityName: "ReminderList")
     }
 
-    @NSManaged public var title: String?
+    @NSManaged public var title: String
     @NSManaged public var reminders: Array<Reminder>
 
     static func create(withTitle title: String, in context: NSManagedObjectContext) {
